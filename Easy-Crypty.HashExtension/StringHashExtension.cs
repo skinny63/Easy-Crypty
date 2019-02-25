@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Easy_Crypty.HashExtension
@@ -19,10 +20,14 @@ namespace Easy_Crypty.HashExtension
         /// <returns></returns>
         public static string Md5Hash(this byte[] byteArrayToEncrypt)
         {
+            StringBuilder sBuilder = new StringBuilder();
             using (MD5 md5Hash = MD5.Create())
             {
-                return Encoding.UTF8.GetString(md5Hash.ComputeHash(byteArrayToEncrypt));
+                foreach (var encryptedByte in md5Hash.ComputeHash(byteArrayToEncrypt))
+                    sBuilder.Append(encryptedByte.ToString("x2"));
             }
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
     }
 }
