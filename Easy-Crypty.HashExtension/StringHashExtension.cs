@@ -17,7 +17,7 @@ namespace Easy_Crypty.HashExtension
         /// <summary>
         /// get the MD5 string hash
         /// </summary>
-        /// <param name="byteArrayToEncrypt">byte array to encrypt</param>
+        /// <param name="byteArrayToEncrypt">bByte array to encrypt</param>
         /// <returns></returns>
         public static string Md5Hash(this byte[] byteArrayToEncrypt)
         {
@@ -28,6 +28,28 @@ namespace Easy_Crypty.HashExtension
                     sBuilder.Append(encryptedByte.ToString("x2"));
             }
             // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
+
+        /// <summary>
+        /// get the Blake2b-512 encrypt
+        /// </summary>
+        /// <param name="stringToEncrypt">String to encrypt</param>
+        /// <returns></returns>
+        public static string Blake2b_512Hash(this string stringToEncrypt) => Blake2b_512Hash(Encoding.UTF8.GetBytes(stringToEncrypt));
+
+        /// <summary>
+        /// get the Blake2b-512 encrypt
+        /// </summary>
+        /// <param name="byteArrayToEncrypt">Byte array to encrypt</param>
+        /// <returns></returns>
+        public static string Blake2b_512Hash(this byte[] byteArrayToEncrypt)
+        {
+            StringBuilder sBuilder = new StringBuilder();
+
+            foreach (var encryptedByte in Blake2B.ComputeHash(byteArrayToEncrypt))
+                sBuilder.Append(encryptedByte.ToString("x2"));
+            
             return sBuilder.ToString();
         }
     }
