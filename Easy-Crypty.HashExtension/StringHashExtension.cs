@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using Blake2Sharp;
 
 namespace Easy_Crypty.HashExtension
 {

@@ -7,12 +7,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Easy-Crypty.HashExtension",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Easy-Crypty.HashExtension.Test", "Easy-Crypty.HashExtension.Test\Easy-Crypty.HashExtension.Test.csproj", "{A62BE3A0-4CDF-432A-92E1-BC5EE0F5737A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C1C1A384-5547-4EB1-9DA1-E488E8363EBA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98C3F5AC-1FDF-4AAF-B067-A9E9C663D87B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unimplemented Hash Method", "Unimplemented Hash Method", "{93A68E25-DD7D-4BCF-B657-FE28BDD3BF2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blake2b", "Blake2b", "{70A6DECA-CE5F-4343-93F7-89A62EDA50A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blake2Sharp", "Unimplemented Hash Method\Blake2b\Blake2Sharp\Blake2Sharp.csproj", "{E21AB364-9130-4F14-ABE1-18FA0C089130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blake2Sharp.Tests", "Unimplemented Hash Method\Blake2b\Blake2Sharp.Tests\Blake2Sharp.Tests.csproj", "{A32451B3-03A3-4CB3-AD9F-1408143D6AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blake2Sharp.CompressionCodeGen", "Unimplemented Hash Method\Blake2b\Blake2Sharp.CompressionCodeGen\Blake2Sharp.CompressionCodeGen.csproj", "{17466328-5736-4EA1-A88D-CE016CCA2E80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +38,28 @@ Global
 		{A62BE3A0-4CDF-432A-92E1-BC5EE0F5737A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A62BE3A0-4CDF-432A-92E1-BC5EE0F5737A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A62BE3A0-4CDF-432A-92E1-BC5EE0F5737A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21AB364-9130-4F14-ABE1-18FA0C089130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21AB364-9130-4F14-ABE1-18FA0C089130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21AB364-9130-4F14-ABE1-18FA0C089130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21AB364-9130-4F14-ABE1-18FA0C089130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32451B3-03A3-4CB3-AD9F-1408143D6AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32451B3-03A3-4CB3-AD9F-1408143D6AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32451B3-03A3-4CB3-AD9F-1408143D6AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32451B3-03A3-4CB3-AD9F-1408143D6AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17466328-5736-4EA1-A88D-CE016CCA2E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17466328-5736-4EA1-A88D-CE016CCA2E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17466328-5736-4EA1-A88D-CE016CCA2E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17466328-5736-4EA1-A88D-CE016CCA2E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70A6DECA-CE5F-4343-93F7-89A62EDA50A6} = {93A68E25-DD7D-4BCF-B657-FE28BDD3BF2A}
+		{98C3F5AC-1FDF-4AAF-B067-A9E9C663D87B} = {70A6DECA-CE5F-4343-93F7-89A62EDA50A6}
+		{E21AB364-9130-4F14-ABE1-18FA0C089130} = {70A6DECA-CE5F-4343-93F7-89A62EDA50A6}
+		{A32451B3-03A3-4CB3-AD9F-1408143D6AB7} = {70A6DECA-CE5F-4343-93F7-89A62EDA50A6}
+		{17466328-5736-4EA1-A88D-CE016CCA2E80} = {70A6DECA-CE5F-4343-93F7-89A62EDA50A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC4E00ED-FB95-473F-B99A-BBEE1A321FEF}
