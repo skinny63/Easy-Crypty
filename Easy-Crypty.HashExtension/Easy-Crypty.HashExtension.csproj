@@ -5,4 +5,8 @@
     <RootNamespace>Easy_Crypty.HashExtension</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Unimplemented Hash Method\Blake2b\Blake2Sharp\Blake2Sharp.csproj" />
+  </ItemGroup>
+
 </Project>
