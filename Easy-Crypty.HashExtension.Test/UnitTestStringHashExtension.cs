@@ -15,5 +15,11 @@ namespace Easy_Crypty.HashExtension.Test
         /// </summary>
         [Fact]
         public void TestMethodBlake2b_512Hash() => Assert.Equal("46695df31ca5449cd6e78403652f9a7d69000d89d700ba644c4b4299e467c6f005f45175e643e1f4301d24b1429d0902deb5f6424593328cd308388c19b9aec9", "blake2bhash".Blake2b_512Hash());
+
+        /// <summary>
+        /// test Sha1 hash
+        /// </summary>
+        [Fact]
+        public void TestMethodSha1Hash() => Assert.Equal("2ef988b46b0a48b54f9a4ce4619e5fb69205cf74", "sha1hash".Sha1Hash());
     }
 }
