@@ -76,5 +76,29 @@ namespace Easy_Crypty.HashExtension
             // Return the hexadecimal string.
             return sBuilder.ToString();
         }
+
+        /// <summary>
+        /// get the Sha256 encrypt
+        /// </summary>
+        /// <param name="stringToEncrypt">String to encrypt</param>
+        /// <returns></returns>
+        public static string Sha256Hash(this string stringToEncrypt) => Sha256Hash(Encoding.UTF8.GetBytes(stringToEncrypt));
+
+        /// <summary>
+        /// get the Sha256 encrypt
+        /// </summary>
+        /// <param name="byteArrayToEncrypt">Byte array to encrypt</param>
+        /// <returns></returns>
+        public static string Sha256Hash(this byte[] byteArrayToEncrypt)
+        {
+            StringBuilder sBuilder = new StringBuilder();
+            using (SHA256 sha1Hash = SHA256.Create())
+            {
+                foreach (var encryptedByte in sha1Hash.ComputeHash(byteArrayToEncrypt))
+                    sBuilder.Append(encryptedByte.ToString("x2"));
+            }
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
     }
 }
