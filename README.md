@@ -16,3 +16,4 @@ var hashedString = "varToHash".Md5Hash();
 * Blake2b-512
 * Sha1
 * Sha256
+* Sha384
