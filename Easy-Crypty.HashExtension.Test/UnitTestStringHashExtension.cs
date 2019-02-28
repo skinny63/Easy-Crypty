@@ -27,5 +27,11 @@ namespace Easy_Crypty.HashExtension.Test
         /// </summary>
         [Fact]
         public void TestMethodSha256Hash() => Assert.Equal("d7fc5162511d42d22462ad5b4c716b73903a677806119f9ad0314763ccd719ca", "sha256hash".Sha256Hash());
+
+        /// <summary>
+        /// test Sha384 hash
+        /// </summary>
+        [Fact]
+        public void TestMethodSha384Hash() => Assert.Equal("e99e181623fa6b45e6eb97ab8015380cec90ec081c398f857a3c6b7f8b97718256d9856ccc1e77c9012278c3457d698d", "sha384hash".Sha384Hash());
     }
 }
