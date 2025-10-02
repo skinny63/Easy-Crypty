@@ -10,7 +10,7 @@
         /// <summary>
         /// Gets the test string used for hash validation.
         /// </summary>
-        private static string TestString => "test";
+        private const string TestString = "test";
 
         /// <summary>
         /// Verifies that <see cref="StringExtensions.HashWith{T}(string)"/> produces the expected hash output<br/>
